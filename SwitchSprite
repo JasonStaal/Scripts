@@ -1,0 +1,56 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SwitchSerenaSprite : MonoBehaviour
+{
+    private SpriteRenderer rend;
+    private Sprite SerenaSprite01, SerenaSprite02, SerenaSprite03, SerenaSprite04;
+
+
+    void Start()
+    {
+        rend = GetComponent<SpriteRenderer>();
+        SerenaSprite01 = Resources.Load<Sprite>("SerenaSprite1");
+        SerenaSprite02 = Resources.Load<Sprite>("SerenaSprite2");
+        SerenaSprite03 = Resources.Load<Sprite>("SerenaSprite3");
+        SerenaSprite04 = Resources.Load<Sprite>("SerenaSprite4");
+        rend.sprite = SerenaSprite01;
+    }
+
+   
+    private void Update()
+    {
+        if (Input.GetKeyDown("4"))
+
+        {
+
+            rend.sprite = SerenaSprite01;
+        }
+
+    
+        if (Input.GetKeyDown("5"))
+
+        {
+
+            rend.sprite = SerenaSprite02;
+        }
+
+        if (Input.GetKeyDown("6"))
+
+        {
+
+            rend.sprite = SerenaSprite03;
+        }
+
+        if (Input.GetKeyDown("7"))
+
+        {
+
+            rend.sprite = SerenaSprite04;
+        }
+
+       
+    }
+
+}
